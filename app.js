@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 let items= ["work","eat","sleep"];
+let workItems = [];
 
 app.get("/",function(req,res){
 
@@ -22,19 +23,29 @@ app.get("/",function(req,res){
     month : "long"
   }
 
-  kindOfDay = day.toLocaleString("en-US",options);
+  listTitle = day.toLocaleString("en-US",options);
 
 
-  res.render("list",{ kindOfDay : kindOfDay , itemsarray : items});
+  res.render("list",{ listTitle : listTitle , itemsarray : items});
 
 })
 
 app.post("/",function(req,res){
   let item = req.body.newItem;
-  items.push(item);
+  console.log(req.body);
+  if(req.body.listValue === "WorkList"){
+    workItems.push(item);
+    res.redirect("/work");
+  }
+  else{
+    items.push(item);
+    res.redirect("/");
+  }
 
-  res.redirect("/");
+})
 
+app.get("/work",function(req,res){
+  res.render("list",{listTitle : "WorkList", itemsarray : workItems});
 })
 
 app.listen(3000,function(req,res){
