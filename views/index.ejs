@@ -43,10 +43,10 @@
               <a href="/today" class="nav-link">start your day</a>
             </li>
             <li class="nav-item">
-              <a href="/work" class="nav-link">create a list</a>
+              <a href="#lists" class="nav-link">create a list</a>
             </li>
             <li class="nav-item">
-              <a href="#lists" class="nav-link">how to use</a>
+              <a href="#cta" class="nav-link">Contact Me</a>
             </li>
           </ul>
         </div>
@@ -118,11 +118,11 @@
       <div class="carousel-inner">
         <div class="carousel-item container-fluid active">
           <h2 class="section-heading">Today's plan</h2>
-          <img src="images\img2.png" alt="image-2">
+          <img src="images\img3.png" alt="image-3">
         </div>
         <div class="carousel-item container-fluid">
           <h2 class="section-heading ">Weekend!!</h2>
-          <img src="images\img3.png" alt="image-3">
+          <img src="images\img2.png" alt="image-2">
         </div>
       </div>
       <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -151,9 +151,9 @@
         <div class="card-body">
           <h2>Finish them!</h2>
           <p>Download photos</p>
-          <p>Order the book</p>
+          <p>Urgent Call</p>
           <p>attend the meeting</p>
-          <button type="button" class="btn btn-lg btn-outline-dark btn-block" onclick={submit} ><a href="/work">create this list</a></button>
+          <button type="button" class="btn btn-lg btn-outline-dark btn-block" onclick="location.href='/Work'" >create this list</button>
         </div>
       </div>
 
@@ -166,7 +166,7 @@
           <p>Get milk</p>
           <p>order the book</p>
           <p>get groceries from store</p>
-          <button type="button" class="btn btn-lg btn-outline-dark btn-block" onclick={submit} ><a href="/shopping">create this list</a></button>
+          <button type="button" class="btn btn-lg btn-outline-dark btn-block" onclick="location.href='/shopping'" >create this list</button>
         </div>
         </div>
 
@@ -181,10 +181,38 @@
           <p>check bill</p>
           <p>dinner with friends</p>
           <p>Go hiking</p>
-          <button type="button" class="btn btn-lg btn-outline-dark btn-block" onclick={submit} ><a href="/weekend">create this list</a></button>
+          <button type="button" class="btn btn-lg btn-outline-dark btn-block" onclick="location.href='/weekend'" >create this list</button>
         </div>
         </div>
-      </div>
+
+        <div class="col-lg-4 col-md-6 cards">
+          <div class="card-header">
+            <h3>Today</h3>
+          </div>
+          <div class="card-body">
+            <button type="button" class="btn btn-lg btn-outline-dark btn-block" onclick="location.href='/Today'" >create this list</button>
+          </div>
+          </div>
+
+        <div class="col-lg-4 col-md-6 cards">
+          <div class="card-header">
+            <h3>Weekly goals</h3>
+          </div>
+          <div class="card-body">
+            <button type="button" class="btn btn-lg btn-outline-dark btn-block" onclick="location.href='/weakly goals'" >create this list</button>
+          </div>
+          </div>
+
+
+      <div class="col-lg-4 col-md-6 cards">
+        <div class="card-header">
+          <h3>Monthly goals</h3>
+        </div>
+        <div class="card-body">
+          <button type="button" class="btn btn-lg btn-outline-dark btn-block" onclick="location.href='/monthly goals'" >create this list</button>
+        </div>
+        </div>
+
 
     </div>
 
@@ -202,11 +230,12 @@
   <!-- Footer -->
 
   <footer id="footer">
-    <i class="fab fa-twitter footer-icon "></i>
-    <i class="fab fa-facebook-f footer-icon"></i>
-    <i class="fab fa-instagram footer-icon"></i>
-    <i class="fas fa-envelope footer-icon"></i>
-    <p>© Copyright 2022 To-Do List</p>
+    <a href="https://twitter.com/NikitaMalik2303"><i class="fa-brands fa-twitter footer-icon"></i></a>
+    <a href="https://www.linkedin.com/in/nikita-malik-140b31222"><i class="fa-brands fa-linkedin footer-icon"></i></a>
+    <a href="https://www.secure.instagram.com/nikitamalik2303/"><i class="fab fa-instagram footer-icon"></i></a>
+    <a href="mailto:NikitaMalik2303@gmail.com"><i class="fas fa-envelope footer-icon"></i></a>
+    <a href="https://github.com/NikitaMalik2303"><i class="fa-brands fa-github footer-icon" ></i></a>
+    <p>© Copyright 2022 Nikita Malik</p>
 
   </footer>
 
