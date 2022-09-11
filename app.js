@@ -39,7 +39,12 @@ const listSchema = {
 
 const List = mongoose.model("List",listSchema);
 
-app.get("/",function(req,res){
+
+app.get("/home",function(req,res){
+  res.render("index");
+});
+
+app.get("/today",function(req,res){
 
   Item.find({},function(err,itemsfound){
 
@@ -52,7 +57,7 @@ app.get("/",function(req,res){
         else{
           console.log("successfully saved default items to database");
         }
-        res.redirect("/");
+        res.redirect("/today");
       });
 
     }else{
@@ -125,7 +130,7 @@ app.post("/delete",function(req,res){
         }
         else{
           console.log("successfully deleted the checked item");
-          res.redirect("/");
+          res.redirect("/today");
         }
       });
   }else{
@@ -138,6 +143,7 @@ app.post("/delete",function(req,res){
 
 
 });
+
 
 app.get("/work",function(req,res){
   res.render("list",{listTitle : "WorkList", itemsarray : workItems});

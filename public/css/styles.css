@@ -10,6 +10,28 @@ body{
   background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
 }
 
+/* navigation bar */
+
+#title .container-fluid {
+  padding-top:3%;
+}
+
+.navbar{
+  padding:0 0 3rem;
+}
+.navbar-brand{
+  font-family:"Ubuntu";
+  font-size:2.5rem;
+  font-weight:400;
+}
+.nav-item{
+  padding:0 20px;
+}
+.nav-link{
+  font-size:1.25rem;
+}
+
+
 h1 {
   color: #fff;
   padding: 10px;
