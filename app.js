@@ -56,7 +56,7 @@ app.get("/",function(req,res){
       });
 
     }else{
-        res.render("list",{ listTitle : "today" , itemsarray : itemsfound});
+        res.render("list",{ listTitle : "Today" , itemsarray : itemsfound});
     }
 
   });
@@ -94,7 +94,7 @@ app.post("/",function(req,res){
     name:itemName
   });
 
-  if(listName == "today"){
+  if(listName == "Today"){
     item.save();
     res.redirect("/");
   }else{
@@ -117,7 +117,7 @@ app.post("/delete",function(req,res){
   const deleteItemId = req.body.deletedItem;
   const listTitle = req.body.listValue;
 
-  if(listTitle=="today"){
+  if(listTitle=="Today"){
 
       Item.findByIdAndRemove(deleteItemId,function(err){
         if(err){
