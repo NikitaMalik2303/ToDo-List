@@ -85,6 +85,8 @@ app.get("/:customListName",function(req,res){
       }else{
         res.render("list",{ listTitle:foundlist.name , itemsarray:foundlist.items});
       }
+    }else{
+      console.log(err);
     }
   });
 
@@ -137,12 +139,18 @@ app.post("/delete",function(req,res){
     List.findOneAndUpdate({name:listTitle},{$pull:{items:{_id:deleteItemId}}},function(err,foundList){
       if(!err){
         res.redirect("/"+listTitle);
+      }else{
+        console.log(err);
       }
     });
   }
 
 
 });
+
+app.post("/back",function(req,res){
+  res.redirect("/home");
+})
 
 
 app.get("/work",function(req,res){
