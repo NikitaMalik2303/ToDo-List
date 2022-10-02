@@ -157,11 +157,6 @@ app.get("/work",function(req,res){
   res.render("list",{listTitle : "WorkList", itemsarray : workItems});
 });
 
-let port = process.env.PORT;
-if(port==null || port ==""){
-  port = 3000;
-}
-
-app.listen(port,function(req,res){
+app.listen(process.env.PORT || 3000 ,function(req,res){
   console.log("server running successfully");
 });
