@@ -1,5 +1,9 @@
 <%- include("header") -%>
-
+  <div >
+    <form class="" action="/back" method="post">
+        <button type="submit" name="button" class="backbtn">Home</button>
+    </form>
+  </div>
     <div class="box">
       <h1 id = "heading" ><%= listTitle %></h1>
     </div>
@@ -18,7 +22,7 @@
       <% }) %>
 
 
-        <form class="item" action="/" method="post">
+        <form class="item" action="/post" method="post">
           <input type="text" name="newItem"  placeholder = "new item" autocomplete="off">
           <button type="submit" name="listValue" value = <%= listTitle  %> >+</button>
         </form>
