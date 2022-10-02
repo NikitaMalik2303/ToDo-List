@@ -9,7 +9,7 @@ app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+mongoose.connect("mongodb+srv://NikitaMalik:test123@cluster0.gmrnl7o.mongodb.net/todolistDB");
 
 
 const itemsSchema = {
@@ -40,7 +40,7 @@ const listSchema = {
 const List = mongoose.model("List",listSchema);
 
 
-app.get("/home",function(req,res){
+app.get("/",function(req,res){
   res.render("index");
 });
 
@@ -92,7 +92,7 @@ app.get("/:customListName",function(req,res){
 
 });
 
-app.post("/",function(req,res){
+app.post("/post",function(req,res){
 
   const itemName = req.body.newItem;
   const listName = req.body.listValue;
@@ -149,7 +149,7 @@ app.post("/delete",function(req,res){
 });
 
 app.post("/back",function(req,res){
-  res.redirect("/home");
+  res.redirect("/");
 })
 
 
